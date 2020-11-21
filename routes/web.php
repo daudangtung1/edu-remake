@@ -21,8 +21,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::namespace('Admin')->group(function (){
+Route::namespace('Admin')->group(function () {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     Route::resource('teacher', 'TeacherController')->except('show', 'edit', 'update');
     Route::resource('class', 'ClassroomController')->except('show', 'edit', 'update');
+    Route::resource('category', 'CategoryController')->except('edit', 'update');
+    Route::resource('test', 'TestController')->except('edit', 'update', 'delete');
+    Route::get('/test/detail/{id}','TestQuestionController@index');
 });
