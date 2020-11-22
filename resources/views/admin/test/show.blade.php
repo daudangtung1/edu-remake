@@ -5,6 +5,7 @@
     <br>
     <br>
     @foreach($testQuestions as $question)
-        <p>{{$question->question}}</p>
+        <a href="{{route('questionShow', $question->id)}}">{{$question->question}}</a>
+        <br>
     @endforeach
 @endsection

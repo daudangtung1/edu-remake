@@ -27,5 +27,5 @@ Route::namespace('Admin')->group(function () {
     Route::resource('class', 'ClassroomController')->except('show', 'edit', 'update');
     Route::resource('category', 'CategoryController')->except('edit', 'update');
     Route::resource('test', 'TestController')->except('edit', 'update', 'delete');
-    Route::get('/test/detail/{id}','TestQuestionController@index');
+    Route::get('/test/detail/{id}','TestQuestionController@show')->name('questionShow');
 });
