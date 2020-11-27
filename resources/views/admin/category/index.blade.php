@@ -25,7 +25,11 @@
                             </th>
                             <th>Name</th>
                             <th>Status</th>
-                            <th style="text-align: center"><a href="{{route('category.create')}}">Create</a></th>
+                            <th>
+                                <button type="button" data-toggle="modal" data-target="#myModal" id="btnCreate">
+                                    Create
+                                </button>
+                            </th>
                         </tr>
                         </thead>
                         <tbody>
@@ -41,7 +45,8 @@
                                     <div class="list-media">
                                         <div class="list-item">
                                             <div class="info">
-                                                <span class="title"><a href="{{route('category.show', $category->id)}}">{{$category->name}}</a> </span>
+                                                <span class="title"><a
+                                                        href="{{route('category.show', $category->id)}}">{{$category->name}}</a> </span>
                                                 <span class="sub-title"></span>
                                             </div>
                                         </div>
@@ -66,4 +71,41 @@
             </div>
         </div>
     </div>
+    @include('admin.category.create')
+@endsection
+
+@section('ajax')
+    <script>
+        $(document).ready(function () {
+            $('#btnAdd').click(function (e) {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN':
+                            $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+
+                e.preventDefault();
+                var formData={
+                    name: $('#catNameCreate').val(),
+                };
+                $.ajax({
+                    type: 'POST',
+                    cache: false,
+                    data: formData,
+                    url: '/category',
+                    dataType: 'json',
+                    success: function () {
+                        $('#createCategory').trigger("reset");
+                        $('#myModal').modal('hide');
+                        console.log('success');
+                    },
+                    error: function(data){
+                        console.log('error');
+                        alert('fail');
+                    }
+                });
+            });
+        });
+    </script>
 @endsection

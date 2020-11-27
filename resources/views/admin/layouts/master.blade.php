@@ -28,13 +28,11 @@
             <!-- Footer START -->
                 @include('admin.layouts.footer')
             <!-- Footer END -->
-
         </div>
         <!-- Page Container END -->
-
     </div>
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="{{asset('admin/assets/js/vendor.js')}}"></script>
 
 <script src="{{asset('admin/assets/js/app.min.js')}}"></script>
@@ -46,7 +44,6 @@
 <script src="{{asset('admin/assets/vendor/datatables/media/js/jquery.dataTables.js')}}"></script>
 <script src="{{asset('admin/assets/vendor/datatables/media/js/dataTables.bootstrap4.min.js')}}"></script>
 <script src="{{asset('admin/assets/js/tables/data-table.js')}}"></script>
-
+@yield('ajax')
 </body>
-
 </html>
