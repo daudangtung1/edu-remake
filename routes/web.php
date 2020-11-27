@@ -25,7 +25,34 @@ Route::namespace('Admin')->group(function () {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     Route::resource('teacher', 'TeacherController')->except('show', 'edit', 'update');
     Route::resource('class', 'ClassroomController')->except('show', 'edit', 'update');
-    Route::resource('category', 'CategoryController')->except('edit', 'update');
+    Route::resource('category', 'CategoryController')->except('edit', 'update', 'create');
     Route::resource('test', 'TestController')->except('edit', 'update', 'delete');
-    Route::get('/test/detail/{id}','TestQuestionController@show')->name('questionShow');
+    Route::get('/test/detail/{id}', 'TestQuestionController@show')->name('questionShow');
+
+    Route::group(['prefix' => 'post'], function () {
+        Route::get('/', [
+            'uses' => 'PostController@index',
+            'as' => 'post.index'
+        ]);
+
+        Route::get('/{id}', [
+            'uses' => 'PostController@show',
+            'as' => 'post.show'
+        ]);
+
+        Route::post('/', [
+            'uses' => 'PostController@store',
+            'as' => 'post.store'
+        ]);
+
+        Route::put('/{id}', [
+            'uses' => 'PostController@update',
+            'as' => 'post.update'
+        ]);
+
+        Route::delete('/{id}', [
+            'uses' => 'PostController@destroy',
+            'as' => 'post.destroy'
+        ]);
+    });
 });
