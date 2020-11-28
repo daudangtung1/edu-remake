@@ -1,31 +1,33 @@
-<div class="modal" id="editCategory-{{$post->id}}">
+<div class="modal fade" id="linkEditorModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Edit category</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="linkEditorModalLabel">Link Editor</h4>
             </div>
-
-            <!-- Modal body -->
             <div class="modal-body">
-                <form action="{{route('post.update')}}" method="post" id="createPostForm">
-                    @csrf
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label control-label">Name</label>
+                <form id="modalFormData" name="modalFormData" class="form-horizontal" novalidate="">
+
+                    <div class="form-group">
+                        <label for="inputLink" class="col-sm-2 control-label">Link</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="title" placeholder="Title" id="title" value="{{$post->name}}">
+                            <input type="text" class="form-control" id="link" name="link"
+                                   placeholder="Enter URL" value="">
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label control-label">Content</label>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Description</label>
                         <div class="col-sm-10">
-                            <textarea type="text" class="form-control" name="content" placeholder="Content" id="content">
-                            </textarea>
+                            <input type="text" class="form-control" id="description" name="description"
+                                   placeholder="Enter Link Description" value="">
                         </div>
                     </div>
-                    <button class="btn btn-gradient-success" id="btnAdd">Submit</button>
                 </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btn-save" value="add">Save changes
+                </button>
+                <input type="hidden" id="link_id" name="link_id" value="0">
             </div>
         </div>
     </div>
