@@ -33,7 +33,9 @@ class PostController extends Controller
     {
     }
 
-    public function destroy()
+    public function destroy($id)
     {
+        $post=Post::destroy($id);
+        return response()->json(array('post'=>$post),200);
     }
 }
