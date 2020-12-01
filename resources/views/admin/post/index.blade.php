@@ -12,7 +12,7 @@
             </div>
         </div>
         <div>
-            <div class="card">
+            <div class="card" id="postForm">
                 <div class="card-body">
                     <div class="table-overflow">
                         <table id="dt-opt" class="table table-hover table-xl">
@@ -97,7 +97,7 @@
                     success: function (data) {
                         $('#createPostForm').trigger("reset");
                         $('.modal-header .close').click();
-                        $('#dt-opt').load(location.href + (' #dt-opt'));
+                        $('#postForm').load(location.href + (' #postForm'));
                         console.log('done!');
                     },
                     error: function () {
