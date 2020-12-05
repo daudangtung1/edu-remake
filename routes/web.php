@@ -28,6 +28,8 @@ Route::namespace('Admin')->group(function () {
     Route::resource('category', 'CategoryController')->except('edit', 'update', 'create');
     Route::resource('test', 'TestController')->except('edit', 'update', 'delete');
     Route::get('/test/detail/{id}', 'TestQuestionController@show')->name('questionShow');
+    Route::resource('category-blog', 'CategoryBlogController')->except('show', 'edit', 'update', 'delete', 'create');
+    Route::get('category-blog/{category_blog_id}', 'CategoryBlogController@postIndex')->name('ShowPostFormCat');
 
     Route::group(['prefix' => 'post'], function () {
         Route::get('/', [

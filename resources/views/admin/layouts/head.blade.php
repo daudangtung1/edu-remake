@@ -21,4 +21,5 @@
     <link href="{{asset('admin/assets/css/materialdesignicons.min.css')}}" rel="stylesheet">
     <link href="{{asset('admin/assets/css/animate.min.css')}}" rel="stylesheet">
     <link href="{{asset('admin/assets/css/app.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/assets/css/customize.css')}}" rel="stylesheet">
 </head>
