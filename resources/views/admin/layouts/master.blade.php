@@ -16,7 +16,7 @@
         <!-- Page Container START -->
         <div class="page-container">
             <!-- Quick View START -->
-                @include('admin.layouts.left-sidebar')
+                @include('admin.layouts.right-sidebar')
             <!-- Side Panel END -->
 
             <!-- Content Wrapper START -->

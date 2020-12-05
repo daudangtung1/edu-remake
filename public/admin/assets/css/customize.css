@@ -1,0 +1,16 @@
+.postCat{
+    background-color: #38c172;
+    border-color: #38c172;
+    padding: 7px 20px;
+    color: white;
+    border-radius: 5px;
+    margin: 0 5px 10px 0;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
