@@ -40,8 +40,10 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label" for="category">Category</label>
                         <div class="col-sm-10">
-                            <select class="form-control" name="category_blog_name" id="category">
-                                {{$htmlOption}}
+                            <select class="form-control" name="category_blog_name" id="category_id">
+                                @foreach($categories as $category)
+                                    <option>{{$category->id}}</option>
+                                @endforeach()
                             </select>
                         </div>
                     </div>

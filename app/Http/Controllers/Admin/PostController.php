@@ -6,31 +6,14 @@ use App\Http\Controllers\Controller;
 use App\Models\CategoryBlog;
 use Illuminate\Http\Request;
 use App\Models\Post;
-use App\View\Components\Recusive;
 
 class PostController extends Controller
 {
-    private $categoryBlog;
-
-    public function __construct(Post $categoryBlog)
-    {
-        $this->categoryBlog = $categoryBlog;
-    }
-
-    public function index($category_blog_id = '')
+    public function index()
     {
         $posts = Post::all();
         $categories = CategoryBlog::all();
-        $htmlOption = $this->getCategory($category_blog_id);
-        return view('admin.blog.post.index', compact('posts', 'categories', 'htmlOption'));
-    }
-
-    public function getCategory($category_blog_id)
-    {
-        $data = $this->categoryBlog->all();
-        $recusive = new Recusive($data);
-        $htmlOption = $recusive->categoryRecusive($category_blog_id);
-        return $htmlOption;
+        return view('admin.blog.post.index', compact('posts', 'categories'));
     }
 
     public function store(Request $request)

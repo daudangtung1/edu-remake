@@ -42,46 +42,22 @@
                     </li>
                 </ul>
             </li>
-{{--            <li class="nav-item dropdown">--}}
-{{--                <a class="dropdown-toggle" href="javascript:void(0);">--}}
-{{--                                <span class="icon-holder">--}}
-{{--                                    <i class="mdi mdi-compass-outline"></i>--}}
-{{--                                </span>--}}
-{{--                    <span class="title">Components</span>--}}
-{{--                    <span class="arrow">--}}
-{{--                                    <i class="mdi mdi-chevron-right"></i>--}}
-{{--                                </span>--}}
-{{--                </a>--}}
-{{--                <ul class="dropdown-menu">--}}
-{{--                    <li>--}}
-{{--                        <a href="accordion.html">Accordion</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="carousel.html">Carousel</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="dropdown.html">Dropdown</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="modals.html">Modals</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="notifications.html">Notifications</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="popover.html">Popover</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="slider-progress.html">Slider & Progress</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="tabs.html">Tabs</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="tooltips.html">Tooltips</a>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </li>--}}
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-image-filter-none"></i>
+                                </span>
+                    <span class="title">Pages</span>
+                    <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{}}">Index</a>
+                    </li>
+                </ul>
+            </li>
 {{--            <li class="nav-item dropdown">--}}
 {{--                <a class="dropdown-toggle" href="javascript:void(0);">--}}
 {{--                                <span class="icon-holder">--}}
