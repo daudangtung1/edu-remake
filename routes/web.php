@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
+Route::get('/', 'HomepageController@index');
 
 Auth::routes();
 
@@ -56,5 +54,14 @@ Route::namespace('Admin')->group(function () {
             'uses' => 'PostController@destroy',
             'as' => 'post.destroy'
         ]);
+    });
+
+    Route::namespace('Page')->group(function () {
+        Route::get('/index-page', 'HomeController@index')->name('indexPage');
+        Route::get('/index-page/create', 'HomeController@create')->name('indexCreate');
+        Route::post('/index-page/create', 'HomeController@store')->name('indexStore');
+        Route::get('/index-page/edit', 'HomeController@edit')->name('indexEdit');
+        Route::post('/index-page/edit', 'HomeController@update')->name('indexUpdate');
+//        Route::get('/index-page', 'HomeController@delete');
     });
 });
