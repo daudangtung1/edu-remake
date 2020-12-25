@@ -112,50 +112,10 @@
                 </a>
                 <ul class="dropdown-menu dropdown-grid col-3 dropdown-lg">
                     <li>
-                        <a href="#">
+                        <a href="{{route('logout')}}">
                             <div class="text-center">
-                                <i class="mdi mdi-email-outline font-size-30 icon-gradient-success"></i>
-                                <p class="m-b-0">Email</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="text-center">
-                                <i class="mdi mdi-folder-outline font-size-30 icon-gradient-success"></i>
-                                <p class="m-b-0">Files</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="text-center">
-                                <i class="mdi mdi mdi-gauge font-size-30 icon-gradient-success"></i>
-                                <p class="m-b-0">Dashboard</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="text-center">
-                                <i class="mdi mdi-play-circle-outline font-size-30 icon-gradient-success"></i>
-                                <p class="m-b-0">Video</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="text-center">
-                                <i class="mdi mdi-image-filter font-size-30 icon-gradient-success"></i>
-                                <p class="m-b-0">Images</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="text-center">
-                                <i class="mdi mdi-image-filter-drama font-size-30 icon-gradient-success"></i>
-                                <p class="m-b-0">Cloud</p>
+                                <i class="mdi mdi-logout font-size-30 icon-gradient-success"></i>
+                                <p class="m-b-0">Logout</p>
                             </div>
                         </a>
                     </li>
