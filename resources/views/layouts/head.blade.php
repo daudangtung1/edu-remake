@@ -5,7 +5,7 @@
     <meta name="author" content="EnvyTheme">
     <meta name="keywords" content="academy, classes, college, course, education, education template, elearning, institute, instructor, learning, Online Learning, study, teaching, training, university">
     <meta name="description" content="EduField is a Responsive and Creative HTML template for education niche website! This template is suitable for offering learning courses, sharing workshops or events, publishing education institute and many more on the web">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <!-- IcoFont Min CSS -->

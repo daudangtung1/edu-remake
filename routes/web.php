@@ -17,6 +17,14 @@ Route::get('/', 'HomepageController@index');
 
 Auth::routes();
 
+Route::group(['prefix' => 'user'], function () {
+    Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+    Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login-form');
+    Route::post('/login', 'Auth\LoginController@login')->name('login');
+    Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+    Route::post('/register', 'Auth\RegisterController@register');
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::namespace('Admin')->group(function () {
