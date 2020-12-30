@@ -5,7 +5,7 @@
             <nav class="classy-navbar justify-content-between" id="EduStudyNav">
 
                 <!-- Logo -->
-                <a class="nav-brand" href="index-default.html"><img src="assets/img/logo.png" alt="logo"></a>
+                <a class="nav-brand" href="/"><img src="{{asset('assets/img/logo.png')}}" alt="logo"></a>
 
                 <!-- Navbar Toggler -->
                 <div class="classy-navbar-toggler">
@@ -23,19 +23,21 @@
                     <!-- Nav Start -->
                     <div class="classynav">
                         <ul>
-{{--                            <li><a href="#" class="active">Home</a>--}}
-{{--                                <ul class="dropdown">--}}
-{{--                                    <li class="active"><a href="index-default.html">Home Demo One</a></li>--}}
-{{--                                    <li><a href="index-two.html">Home Demo Two</a></li>--}}
-{{--                                    <li><a href="index-three.html">Home Demo Three</a></li>--}}
-{{--                                    <li><a href="index-four.html">Home Demo Four</a></li>--}}
-{{--                                </ul>--}}
-{{--                            </li>--}}
+                            {{--                            <li><a href="#" class="active">Home</a>--}}
+                            {{--                                <ul class="dropdown">--}}
+                            {{--                                    <li class="active"><a href="index-default.html">Home Demo One</a></li>--}}
+                            {{--                                    <li><a href="index-two.html">Home Demo Two</a></li>--}}
+                            {{--                                    <li><a href="index-three.html">Home Demo Three</a></li>--}}
+                            {{--                                    <li><a href="index-four.html">Home Demo Four</a></li>--}}
+                            {{--                                </ul>--}}
+                            {{--                            </li>--}}
 
                             <li>
                                 <a href="{{route('login')}}" class="active">Login</a>
                             </li>
-
+                            <li>
+                                <a href="{{route('register')}}" class="active">Register</a>
+                            </li>
                             <li><a href="#search" class="search-btn"><i class="icofont-search-2"></i></a></li>
                         </ul>
                     </div>
